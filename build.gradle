@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.myproj'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+/*task upper {
+    doLast {
+        String someString = 'mY_nAmE'
+        println "Original: $someString"
+        println "Upper case: ${someString.toUpperCase()}"
+    }   
+}
+
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
+task intro {
+    dependsOn hello
+    doLast {
+        println "I'm Gradle"
+    }
+}*/
